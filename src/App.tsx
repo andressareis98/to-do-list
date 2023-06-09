@@ -7,16 +7,16 @@ import { Form } from "./components/Form";
 import { Info } from "./components/Info";
 import { List } from "./components/List";
 import { TaskInterface } from "./interfaces/Task";
+import { EmptyList } from "./components/EmptyList";
 
 export function App() {
-  const [listTasks, setListTasks] = useState<TaskInterface[]>([
-    { id: 1, title: "Atividade 1", isCompleted: false },
-    { id: 2, title: "Atividade 2", isCompleted: false },
-  ]);
+  const [listTasks, setListTasks] = useState<TaskInterface[]>([]);
 
   function createNewTask(task: TaskInterface) {
     setListTasks([...listTasks, task]);
   }
+
+  const showList = listTasks.length > 0;
 
   return (
     <div>
@@ -25,7 +25,7 @@ export function App() {
         <Form onCreateNewTask={createNewTask} />
         <div className={styles.tasks}>
           <Info />
-          <List tasks={listTasks} />
+          {showList ? <List tasks={listTasks} /> : <EmptyList />}
         </div>
       </main>
     </div>

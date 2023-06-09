@@ -1,6 +1,6 @@
 import styles from "./EmptyList.module.css";
 
-import clipboardIcon from "../../../assets/clipboard.png";
+import clipboardIcon from "../../assets/clipboard.png";
 
 export function EmptyList() {
   return (
