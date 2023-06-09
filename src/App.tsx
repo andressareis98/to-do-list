@@ -16,6 +16,13 @@ export function App() {
     setListTasks([...listTasks, task]);
   }
 
+  function deleteTask(task: TaskInterface) {
+    const newArray = listTasks.filter((item) => {
+      return item.id !== task.id;
+    });
+    setListTasks(newArray);
+  }
+
   const showList = listTasks.length > 0;
 
   return (
@@ -25,7 +32,11 @@ export function App() {
         <Form onCreateNewTask={createNewTask} />
         <div className={styles.tasks}>
           <Info />
-          {showList ? <List tasks={listTasks} /> : <EmptyList />}
+          {showList ? (
+            <List tasks={listTasks} onDeleteTask={deleteTask} />
+          ) : (
+            <EmptyList />
+          )}
         </div>
       </main>
     </div>

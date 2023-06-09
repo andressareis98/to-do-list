@@ -2,7 +2,8 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
   min-height: 4.5rem;
   border-radius: 8px;
   padding: 1rem;
@@ -11,8 +12,9 @@
   margin-bottom: 0.75rem;
 }
 
-.task .checkbox-container {
-  width: 16px;
+.boxInput {
+  display: flex;
+  flex-direction: row;
 }
 
 .task input {
@@ -52,6 +54,16 @@
   word-break: break-all;
 }
 
-.task .checkedLabel {
-  text-decoration: line-through;
+.trash {
+  box-sizing: content-box;
+  width: 16px;
+  height: 16px;
+  padding: 4px;
+  border-radius: 4px;
+  color: var(--gray-300);
+}
+
+.trash:hover {
+  color: var(--danger);
+  background-color: var(--gray-400);
 }
