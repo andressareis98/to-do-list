@@ -21,7 +21,7 @@
 
 <h3>Removendo uma atividade</h3>
 
----![Excluindo uma task](https://github.com/andressareis98/to-do-list/assets/39246695/0ea9a0d2-bfd4-472f-8798-e8a4bab71919)
+![Excluindo uma task](https://github.com/andressareis98/to-do-list/assets/39246695/0ea9a0d2-bfd4-472f-8798-e8a4bab71919)
 
 # 🧠 Conhecimentos técnicos 
 O projeto teve como objetivo aprofundar os seguintes conhecimentos:
