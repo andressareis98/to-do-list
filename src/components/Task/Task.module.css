@@ -54,6 +54,10 @@
   word-break: break-all;
 }
 
+.checkedLabel {
+  text-decoration: line-through;
+}
+
 .trash {
   box-sizing: content-box;
   width: 16px;

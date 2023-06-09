@@ -11,9 +11,23 @@ import { EmptyList } from "./components/EmptyList";
 
 export function App() {
   const [listTasks, setListTasks] = useState<TaskInterface[]>([]);
+  const showList = listTasks.length > 0;
 
   function createNewTask(task: TaskInterface) {
     setListTasks([...listTasks, task]);
+  }
+
+  function editTask(task: TaskInterface) {
+    const newArray = listTasks.map((item) => {
+      if (item.id !== task.id) {
+        return item;
+      }
+      return task;
+    });
+
+    console.log(newArray);
+
+    setListTasks(newArray);
   }
 
   function deleteTask(task: TaskInterface) {
@@ -23,8 +37,6 @@ export function App() {
     setListTasks(newArray);
   }
 
-  const showList = listTasks.length > 0;
-
   return (
     <div>
       <Header />
@@ -33,7 +45,11 @@ export function App() {
         <div className={styles.tasks}>
           <Info />
           {showList ? (
-            <List tasks={listTasks} onDeleteTask={deleteTask} />
+            <List
+              tasks={listTasks}
+              onDeleteTask={deleteTask}
+              onEditTask={editTask}
+            />
           ) : (
             <EmptyList />
           )}

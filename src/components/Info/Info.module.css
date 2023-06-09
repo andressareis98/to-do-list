@@ -8,11 +8,6 @@
   margin-bottom: 1.5rem;
 }
 
-.info-text-box {
-  display: flex;
-  flex-direction: row;
-}
-
 .created {
   display: flex;
   flex-direction: row;

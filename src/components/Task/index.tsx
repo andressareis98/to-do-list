@@ -5,19 +5,29 @@ import { Trash } from "@phosphor-icons/react";
 interface Props {
   task: TaskInterface;
   onDeleteTask: (task: TaskInterface) => void;
+  onEditTask: (task: TaskInterface) => void;
 }
 
-export function Task({ task, onDeleteTask }: Props) {
+export function Task({ task, onDeleteTask, onEditTask }: Props) {
   const isChecked = task.isCompleted;
 
   function handleDeleteTask() {
     onDeleteTask(task);
   }
+
+  function handleEditTask() {
+    onEditTask({ ...task, isCompleted: !task.isCompleted });
+  }
   return (
     <div className={styles.task}>
       <div className={styles.boxInput}>
         <div>
-          <input type="checkbox" className={styles.checkbox} id="checkbox" />
+          <input
+            id="checkbox"
+            type="checkbox"
+            className={styles.checkbox}
+            onClick={handleEditTask}
+          />
         </div>
         <label
           htmlFor="checkbox"
