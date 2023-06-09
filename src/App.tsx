@@ -25,8 +25,6 @@ export function App() {
       return task;
     });
 
-    console.log(newArray);
-
     setListTasks(newArray);
   }
 
@@ -43,7 +41,7 @@ export function App() {
       <main className={styles.main}>
         <Form onCreateNewTask={createNewTask} />
         <div className={styles.tasks}>
-          <Info />
+          <Info listTasks={listTasks} />
           {showList ? (
             <List
               tasks={listTasks}
