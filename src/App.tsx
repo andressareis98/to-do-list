@@ -37,7 +37,6 @@ export function App() {
 
   return (
     <div>
-      Texto
       <Header />
       <main className={styles.main}>
         <Form onCreateNewTask={createNewTask} />
