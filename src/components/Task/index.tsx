@@ -1,6 +1,8 @@
-import styles from "./Task.module.css";
 import { TaskInterface } from "../../interfaces/Task";
 import { Trash } from "@phosphor-icons/react";
+
+import styles from "./Task.module.css";
+import "../../global.css";
 
 interface Props {
   task: TaskInterface;

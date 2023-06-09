@@ -1,6 +1,7 @@
-import "../../global.css";
 import { TaskInterface } from "../../interfaces/Task";
+
 import styles from "./Info.module.css";
+import "../../global.css";
 
 interface Props {
   listTasks: TaskInterface[];

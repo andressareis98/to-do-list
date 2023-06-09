@@ -1,6 +1,8 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { TaskInterface } from "../../interfaces/Task";
+
 import styles from "./Form.module.css";
+import "../../global.css";
 
 import PlusCircle from "@phosphor-icons/react/PlusCircle";
 

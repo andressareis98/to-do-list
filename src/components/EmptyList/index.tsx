@@ -1,4 +1,5 @@
 import styles from "./EmptyList.module.css";
+import "../../global.css";
 
 import clipboardIcon from "../../assets/clipboard.png";
 

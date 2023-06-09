@@ -1,6 +1,8 @@
 import { TaskInterface } from "../../interfaces/Task";
 import { Task } from "../Task";
 
+import "../../global.css";
+
 interface Props {
   tasks: TaskInterface[];
   onDeleteTask: (task: TaskInterface) => void;

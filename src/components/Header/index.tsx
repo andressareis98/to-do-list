@@ -1,4 +1,5 @@
 import styles from "./Header.module.css";
+import "../../global.css";
 
 import logo from "../../assets/logo.png";
 
