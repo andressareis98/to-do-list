@@ -7,7 +7,6 @@
 - Marque tarefas como concluídas.
 - Remova tarefas da lista.
 - Visualize todas as tarefas em uma lista.
--
 ---
 # 📱Capturas de tela
 
